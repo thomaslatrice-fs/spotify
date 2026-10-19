@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WorkVibes</title>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>WorkVibes</h1>
+
+        <p>
+          Music that matches your 9-to-5. Choose your profession and discover
+          music for your workday.
+        </p>
+      </header>
+
+      <section class="profession-section">
+        <h2>Choose Your Profession</h2>
+
+        <select id="profession">
+          <option value="">Select a profession</option>
+
+          <option value="developer">Developer</option>
+          <option value="nurse">Nurse</option>
+          <option value="teacher">Teacher</option>
+          <option value="accountant">Accountant</option>
+          <option value="designer">Designer</option>
+          <option value="trainer">Trainer</option>
+          <option value="writer">Writer</option>
+          <option value="chef">Chef</option>
+        </select>
+
+        <button id="recommendButton">Find My Work Vibe</button>
+      </section>
+
+      <section class="recommendations-section">
+        <h2 id="recommendationTitle">Your Recommendations</h2>
+
+        <div id="recommendations"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
