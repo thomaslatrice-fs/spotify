@@ -93,3 +93,30 @@ button:hover {
   color: #1db954;
   text-decoration: none;
 }
+
+@media (max-width: 768px) {
+  #recommendations {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    width: 95%;
+    padding: 30px 15px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  select,
+  button {
+    width: 100%;
+    margin: 8px 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #recommendations {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

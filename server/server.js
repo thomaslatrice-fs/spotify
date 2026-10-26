@@ -1,11 +1,18 @@
 require("dotenv").config();
 
+const cors = require("cors");
 const express = require("express");
+const jwt = require("jsonwebtoken");
+const cookieParser = require("cookie-parser");
+const crypto = require("crypto");
+const path = require("path");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+app.use(cors());
 app.use(express.json());
+app.use(cookieParser());
 
 const professionGenres = {
   developer: ["lo-fi", "electronic", "ambient"],
@@ -111,7 +118,9 @@ app.get("/api/recommendations/:profession", async (req, res) => {
     });
   }
 });
-
+app.get("/", (req, res) => {
+  res.send("WorkVibes API is running");
+});
 app.listen(PORT, () => {
   console.log(`WorkVibes API running on port ${PORT}`);
 });
