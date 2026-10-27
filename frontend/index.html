@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
     <title>WorkVibes</title>
   </head>
   <body>
-    <main class="container">
+    <p id="authMessage" role="status">Checking your login...</p>
+    <main class="container" id="appContent" hidden>
       <header>
         <h1>WorkVibes</h1>
 
@@ -14,6 +16,8 @@
           Music that matches your 9-to-5. Choose your profession and discover
           music for your workday.
         </p>
+
+        <button id="logoutButton" type="button">Log out</button>
       </header>
 
       <section class="profession-section">
